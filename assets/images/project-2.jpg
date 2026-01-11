@@ -1,0 +1,5 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#c5b8a5"/>
+  <circle cx="300" cy="200" r="80" fill="#d4c9ba" opacity="0.6"/>
+  <text x="50%" y="55%" font-family="Arial, sans-serif" font-size="28" fill="#6f6a5e" text-anchor="middle" dominant-baseline="middle">Project 2</text>
+</svg>
