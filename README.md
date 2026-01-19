@@ -1,4 +1,4 @@
-# Portfolio Website
+# christhomasdesigns.github.io
 
 A modern, responsive portfolio website showcasing design and development work.
 
@@ -6,9 +6,18 @@ A modern, responsive portfolio website showcasing design and development work.
 
 This portfolio website features a clean, minimalist design with a warm color palette. It showcases projects in an organized grid layout with smooth interactions and responsive design.
 
+## Featured Projects
+
+- **Battlefy** - Esports Platform Design
+- **Ford** - Automotive Innovation
+- **Intel Design** - Brand Identity System
+- **Digital Experience** - Platform Design
+- **Rejected Branding** - Brand Explorations
+- **Logo Projects** - Identity Design
+
 ## Design
 
-The design is based on a custom Figma mockup featuring:
+The design features:
 - Clean typography using the Sora font family
 - Warm beige color palette (#e2dbd3, #f2e8dd)
 - Backdrop blur effects on hero section
@@ -26,38 +35,28 @@ The design is based on a custom Figma mockup featuring:
 
 ```
 portfolio/
-├── index.html          # Main HTML file
+├── index.html          # Main homepage
+├── project-*.html      # Individual project pages
 ├── css/
-│   └── styles.css     # All styles
+│   ├── styles.css      # Global styles
+│   └── project.css     # Project page styles
 ├── js/
 │   └── main.js        # Interactive functionality
 ├── assets/
 │   └── images/        # Image assets
-├── .gitignore
 └── README.md
 ```
 
-## Getting Started
+## Live Site
 
-Simply open `index.html` in a modern web browser to view the portfolio.
-
-For development, you can use a local server:
-
-```bash
-# Using Python
-python -m http.server 8000
-
-# Or using Node.js
-npx http-server
-```
-
-Then navigate to `http://localhost:8000` in your browser.
+Visit the live portfolio at: [https://christhomasdesigns.github.io](https://christhomasdesigns.github.io)
 
 ## Features
 
 - Responsive design for all screen sizes
 - Smooth scrolling navigation
 - Project showcase with hover effects
+- Gallery lightbox for project images
 - Clean, accessible markup
 - Optimized for performance
 
