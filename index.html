@@ -14,15 +14,46 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Fixed Video Background -->
+    <div class="video-background">
+        <video class="video-background__video" autoplay muted loop playsinline>
+            <source src="assets/images/palm.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-background__overlay"></div>
+    </div>
+
     <!-- Header/Navigation -->
     <header class="header">
         <nav class="nav container">
             <div class="nav__brand">
-                <a href="#" class="nav__logo">FORD MOTOR COMPANY</a>
+                <a href="#" class="nav__logo">
+                    <img src="assets/images/CHRISTHOMASDESIGNS.svg" alt="chris thomas designs" style="width: 75%; height: auto;">
+                </a>
             </div>
             <ul class="nav__menu">
-                <li class="nav__item">
+                <li class="nav__item nav__item--has-dropdown">
                     <a href="#work" class="nav__link">WORK</a>
+                    <ul class="nav__dropdown">
+                        <li class="nav__dropdown-item">
+                            <a href="project-intel-design.html" class="nav__dropdown-link">Intel Design</a>
+                        </li>
+                        <li class="nav__dropdown-item">
+                            <a href="project-ford.html" class="nav__dropdown-link">Ford Project</a>
+                        </li>
+                        <li class="nav__dropdown-item">
+                            <a href="project-battlefy.html" class="nav__dropdown-link">Battlefy Project</a>
+                        </li>
+                        <li class="nav__dropdown-item">
+                            <a href="project-digital-experience.html" class="nav__dropdown-link">Digital Experience</a>
+                        </li>
+                        <li class="nav__dropdown-item">
+                            <a href="project-rejected-branding.html" class="nav__dropdown-link">Rejected Branding</a>
+                        </li>
+                        <li class="nav__dropdown-item">
+                            <a href="project-logo-projects.html" class="nav__dropdown-link">Logo Projects</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav__item">
                     <a href="#art" class="nav__link">ART</a>
@@ -35,8 +66,10 @@
     <section class="hero">
         <div class="hero__background"></div>
         <div class="hero__content container">
-            <h1 class="hero__title">Design & technology for pivotal moments</h1>
-            <p class="hero__subtitle">Creating meaningful experiences through thoughtful design and innovative solutions</p>
+            <div class="hero__text-wrapper">
+                <h1 class="hero__title">Design & technology for pivotal moments</h1>
+                <p class="hero__subtitle">Bridging the gap between brand promise and product delivery</p>
+            </div>
         </div>
     </section>
 
@@ -44,15 +77,16 @@
     <section class="spotlight" id="work">
         <div class="container">
             <div class="section-label">SPOTLIGHT</div>
-            <div class="spotlight__card">
-                <div class="spotlight__image">
-                    <img src="assets/images/spotlight-project.jpg" alt="Featured project showcase" loading="lazy">
-                </div>
-                <div class="spotlight__info">
-                    <h2 class="spotlight__title">Featured Project Title</h2>
-                    <p class="spotlight__description">A comprehensive design solution that transforms user experiences through innovative technology and thoughtful interaction design.</p>
-                    <a href="#" class="btn btn--primary">View Project</a>
-                </div>
+            <div class="spotlight__content">
+                <a href="project-intel-design.html" class="spotlight__link">
+                    <div class="spotlight__video-container">
+                        <img src="assets/images/intelLlogo.gif" alt="Spotlight showcase" class="spotlight__video">
+                        <div class="spotlight__overlay">
+                            <span class="spotlight__cta">VIEW PROJECT</span>
+                        </div>
+                    </div>
+                </a>
+                <p class="spotlight__description">A curated collection of recent work showcasing design excellence and technical innovation across digital platforms.</p>
             </div>
         </div>
     </section>
@@ -61,165 +95,81 @@
     <section class="all-work">
         <div class="container">
             <div class="section-label">ALL WORK</div>
-            <div class="work-grid">
-                <article class="work-card">
-                    <div class="work-card__image">
-                        <img src="assets/images/project-1.jpg" alt="Project 1" loading="lazy">
+        </div>
+        <div class="work-carousel">
+            <div class="work-carousel__track">
+                <article class="work-carousel__card" data-project-link="project-battlefy.html">
+                    <div class="work-carousel__image">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/images/Battlefy/bfy-logo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-                    <div class="work-card__content">
-                        <h3 class="work-card__title">Digital Experience Platform</h3>
-                        <p class="work-card__description">Redesigning the digital ecosystem for seamless user interactions</p>
-                        <div class="work-card__tags">
-                            <span class="tag">UX Design</span>
-                            <span class="tag">Development</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="work-card">
-                    <div class="work-card__image">
-                        <img src="assets/images/project-2.jpg" alt="Project 2" loading="lazy">
-                    </div>
-                    <div class="work-card__content">
-                        <h3 class="work-card__title">Mobile App Innovation</h3>
-                        <p class="work-card__description">Creating intuitive mobile experiences for modern users</p>
-                        <div class="work-card__tags">
-                            <span class="tag">Mobile</span>
-                            <span class="tag">UI Design</span>
-                        </div>
+                    <div class="work-carousel__content">
+                        <h3 class="work-carousel__title">Battlefy Project</h3>
+                        <p class="work-carousel__subtitle">Esports Platform Design</p>
                     </div>
                 </article>
 
-                <article class="work-card">
-                    <div class="work-card__image">
-                        <img src="assets/images/project-3.jpg" alt="Project 3" loading="lazy">
+                <article class="work-carousel__card" data-project-link="project-ford.html">
+                    <div class="work-carousel__image">
+                        <img src="assets/images/Ford/ford-logo.gif" alt="Ford Project" loading="lazy">
                     </div>
-                    <div class="work-card__content">
-                        <h3 class="work-card__title">Brand Identity System</h3>
-                        <p class="work-card__description">Developing cohesive visual language across all touchpoints</p>
-                        <div class="work-card__tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Visual Design</span>
-                        </div>
+                    <div class="work-carousel__content">
+                        <h3 class="work-carousel__title">Ford Project</h3>
+                        <p class="work-carousel__subtitle">Automotive Innovation</p>
                     </div>
                 </article>
 
-                <article class="work-card">
-                    <div class="work-card__image">
-                        <img src="assets/images/project-4.jpg" alt="Project 4" loading="lazy">
+                <article class="work-carousel__card" data-project-link="project-rejected-branding.html">
+                    <div class="work-carousel__image">
+                        <img src="assets/images/project-5.jpg" alt="Rejected Branding" loading="lazy">
                     </div>
-                    <div class="work-card__content">
-                        <h3 class="work-card__title">E-commerce Platform</h3>
-                        <p class="work-card__description">Building scalable solutions for online retail experiences</p>
-                        <div class="work-card__tags">
-                            <span class="tag">Web Design</span>
-                            <span class="tag">Development</span>
-                        </div>
+                    <div class="work-carousel__content">
+                        <h3 class="work-carousel__title">Rejected Branding</h3>
+                        <p class="work-carousel__subtitle">Brand Explorations</p>
                     </div>
                 </article>
 
-                <article class="work-card">
-                    <div class="work-card__image">
-                        <img src="assets/images/project-5.jpg" alt="Project 5" loading="lazy">
+                <article class="work-carousel__card" data-project-link="project-logo-projects.html">
+                    <div class="work-carousel__image">
+                        <img src="assets/images/project-6.jpg" alt="Logo Projects" loading="lazy">
                     </div>
-                    <div class="work-card__content">
-                        <h3 class="work-card__title">Data Visualization Dashboard</h3>
-                        <p class="work-card__description">Transforming complex data into actionable insights</p>
-                        <div class="work-card__tags">
-                            <span class="tag">Data Viz</span>
-                            <span class="tag">UI Design</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="work-card">
-                    <div class="work-card__image">
-                        <img src="assets/images/project-6.jpg" alt="Project 6" loading="lazy">
-                    </div>
-                    <div class="work-card__content">
-                        <h3 class="work-card__title">Design System Framework</h3>
-                        <p class="work-card__description">Creating consistent design patterns for enterprise products</p>
-                        <div class="work-card__tags">
-                            <span class="tag">Design Systems</span>
-                            <span class="tag">Documentation</span>
-                        </div>
+                    <div class="work-carousel__content">
+                        <h3 class="work-carousel__title">Logo Projects</h3>
+                        <p class="work-carousel__subtitle">Identity Design</p>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- What Was Done Section -->
-    <section class="what-done">
+    <!-- My History Section -->
+    <section class="my-history">
         <div class="container">
-            <div class="section-label">WHAT WAS DONE</div>
-            <div class="what-done__content">
-                <h2 class="what-done__title">Comprehensive Design & Development Approach</h2>
-                <div class="what-done__grid">
-                    <div class="what-done__item">
-                        <h3 class="what-done__subtitle">Research & Strategy</h3>
-                        <p class="what-done__text">
-                            In-depth user research and competitive analysis to inform design decisions. 
-                            Developed comprehensive strategies aligned with business objectives and user needs.
-                        </p>
-                    </div>
-                    <div class="what-done__item">
-                        <h3 class="what-done__subtitle">Design & Prototyping</h3>
-                        <p class="what-done__text">
-                            Created high-fidelity designs and interactive prototypes. Conducted usability 
-                            testing and iterated based on feedback to ensure optimal user experience.
-                        </p>
-                    </div>
-                    <div class="what-done__item">
-                        <h3 class="what-done__subtitle">Development & Implementation</h3>
-                        <p class="what-done__text">
-                            Built responsive, accessible, and performant solutions using modern technologies. 
-                            Collaborated closely with development teams to ensure design integrity.
-                        </p>
-                    </div>
-                    <div class="what-done__item">
-                        <h3 class="what-done__subtitle">Testing & Optimization</h3>
-                        <p class="what-done__text">
-                            Rigorous testing across devices and browsers. Continuous optimization based on 
-                            analytics and user feedback to maximize impact and effectiveness.
-                        </p>
-                    </div>
-                </div>
+            <div class="section-label">MY HISTORY</div>
+            <div class="my-history__content">
+                <p class="my-history__text">
+                    I am a multi-disciplinary designer who believes that a brand isn't just how something looks, it's how it works. With experience ranging from Associate Design Director to Lead UI/UX Designer, I bridge the gap between high-level brand storytelling and tactical digital product design.
+                </p>
+                <p class="my-history__text">
+                    My career has been defined by agility. Whether I'm navigating the fast-paced world of startup incubators or defining visual systems for global tech giants, I bring the same level of rigorous craft and strategic thinking.
+                </p>
+                <p class="my-history__text">
+                    Beyond the commercial, I am deeply committed to my community, having dedicated the last decade to pro-bono design for local charities to help mission-driven organizations find their voice.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- About/Footer Section -->
-    <footer class="about" id="art">
+    <!-- Footer Section -->
+    <footer class="footer" id="art">
         <div class="container">
-            <div class="about__content">
-                <div class="about__bio">
-                    <h2 class="about__title">Chris Thomas</h2>
-                    <p class="about__tagline">Designer & Developer crafting digital experiences</p>
-                    <p class="about__description">
-                        With over a decade of experience in design and technology, I specialize in 
-                        creating meaningful digital experiences that solve real problems. My work sits 
-                        at the intersection of design thinking and technical innovation, always focused 
-                        on delivering value to users and businesses alike.
-                    </p>
-                    <p class="about__description">
-                        I believe in the power of collaboration, continuous learning, and pushing the 
-                        boundaries of what's possible in digital design.
-                    </p>
-                </div>
-                <div class="about__actions">
-                    <a href="#art-portfolio" class="btn btn--secondary">VIEW ART SIDE</a>
-                    <a href="#contact" class="btn btn--primary">CONTACT ME</a>
-                </div>
-            </div>
-            <div class="footer__info">
-                <p class="footer__copyright">&copy; 2026 All rights reserved.</p>
-                <div class="footer__links">
-                    <a href="#" class="footer__link">LinkedIn</a>
-                    <a href="#" class="footer__link">Twitter</a>
-                    <a href="#" class="footer__link">GitHub</a>
-                    <a href="#" class="footer__link">Dribbble</a>
-                </div>
+            <h2 class="footer__title">Available for Freelance or Full-Time Hire</h2>
+            <p class="footer__subhead">Add your subhead content here - describe what you do, your approach, or a call to action that engages visitors.</p>
+            <div class="footer__actions">
+                <a href="#art-portfolio" class="footer__cta">VIEW ART SIDE</a>
+                <a href="mailto:your@email.com" class="footer__cta">CONTACT ME</a>
             </div>
         </div>
     </footer>
