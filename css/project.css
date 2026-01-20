@@ -141,7 +141,7 @@
     border: 1px solid rgba(0, 0, 0, 1);
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid rgba(47, 39, 22, 0.1);
+    border-bottom: none;
     border-left: none;
     color: rgba(47, 39, 22, 1);
 }
@@ -153,10 +153,15 @@
 }
 
 .project-section__highlight p {
-    font-size: clamp(18px, 2.5vw, 24px);
-    font-weight: 700;
-    line-height: 32px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
     color: #2f2716;
+    margin-bottom: clamp(20px, 2.5vw, 32px);
+}
+
+.project-section__highlight p:last-child {
+    margin-bottom: 0;
 }
 
 .project-section__highlight ul {
@@ -400,7 +405,7 @@
 
 .project-more {
     padding: clamp(56px, 10vw, 56px) 0;
-    border-bottom: 1px solid rgba(47, 39, 22, 0.1);
+    border-bottom: none;
     overflow: hidden;
 }
 
@@ -475,7 +480,8 @@
     border-radius: 8px;
 }
 
-.project-more .work-carousel__image img {
+.project-more .work-carousel__image img,
+.project-more .work-carousel__image video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -484,7 +490,8 @@
     border-radius: 8px;
 }
 
-.project-more .work-carousel__card:hover .work-carousel__image img {
+.project-more .work-carousel__card:hover .work-carousel__image img,
+.project-more .work-carousel__card:hover .work-carousel__image video {
     transform: scale(0.95);
 }
 
@@ -599,8 +606,34 @@
         max-width: 100%;
     }
 
+    .project-gallery {
+        padding: clamp(40px, 8vw, 56px) 0;
+    }
+
+    .project-gallery__carousel {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x proximity;
+    }
+
+    .project-gallery__track {
+        gap: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .project-gallery__card {
-        height: clamp(350px, 70vw, 400px);
+        height: clamp(300px, 60vw, 400px);
+        width: clamp(250px, 70vw, 350px);
+        scroll-snap-align: start;
+    }
+
+    .project-gallery__image {
+        border-radius: 4px;
+    }
+
+    .project-gallery__image img,
+    .project-gallery__image video {
+        border-radius: 4px;
     }
 
     .project-overview .container {
@@ -636,6 +669,21 @@
     .project-section__highlight,
     .project-section__text {
         padding: 0 clamp(20px, 5vw, 40px);
+    }
+
+    .project-gallery {
+        padding: 32px 0;
+    }
+
+    .project-gallery__track {
+        gap: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .project-gallery__card {
+        height: clamp(250px, 55vw, 300px);
+        width: clamp(220px, 75vw, 280px);
     }
 }
 
